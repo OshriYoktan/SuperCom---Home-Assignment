@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskManagerAPI.DTOs;
 using TaskManagerAPI.Interfaces;
 using TaskManagerAPI.Models;
+using TaskManagerAPI.Repositories;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TaskManagerAPI.Controllers
@@ -13,15 +14,18 @@ namespace TaskManagerAPI.Controllers
     public class TasksController : ControllerBase
     {
         private readonly ITaskRepository _repository;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly ILogger<TasksController> _logger;
 
         public TasksController(
             ITaskRepository repository,
+            IUserRepository userRepository,
             IMapper mapper,
             ILogger<TasksController> logger)
         {
             _repository = repository;
+            _userRepository = userRepository;
             _mapper = mapper;
             _logger = logger;
         }
@@ -51,13 +55,18 @@ namespace TaskManagerAPI.Controllers
             if (dto.DueDate < DateTime.UtcNow.Date)
                 return BadRequest(new { error = "Due date cannot be in the past." });
 
+            var user = await _userRepository.GetUserById(dto.UserId);
+            if (user == null)
+            {
+                return NotFound(new { error = $"User does not exist." });
+            }
+
             try
             {
                 var entity = _mapper.Map<TaskEntity>(dto);
                 var created = await _repository.AddAsync(entity);
                 var taskDto = _mapper.Map<TaskDTO>(created);
 
-                //return CreatedAtAction(nameof(GetByUser), new { userId = created.UserId }, taskDto);
                 return Ok(taskDto);
             }
             catch (DbUpdateException dbEx)
@@ -83,6 +92,12 @@ namespace TaskManagerAPI.Controllers
 
             if (taskDto.DueDate < DateTime.UtcNow.Date)
                 return BadRequest(new { error = "Due date cannot be in the past." });
+
+            var user = await _userRepository.GetUserById(taskDto.UserId);
+            if (user == null)
+            {
+                return NotFound(new { error = $"User does not exist." });
+            }
 
             try
             {

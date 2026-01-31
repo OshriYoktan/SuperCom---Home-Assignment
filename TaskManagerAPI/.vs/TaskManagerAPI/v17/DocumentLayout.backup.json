@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\mapper\\taskmapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:mapper\\taskmapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\mapper\\taskmapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:mapper\\taskmapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|c:\\users\\oshri\\desktop\\taskmanager\\taskmanagerapi\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AF98507-E940-4E62-BD9D-2164D232AEE4}|TaskManagerAPI.csproj|solutionrelative:repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
               "ToolTip": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Controllers\\TasksController.cs",
               "RelativeToolTip": "Controllers\\TasksController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAD4vzsAAABmAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAowF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T17:16:23.385Z",
               "IsPinned": true,
@@ -56,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ITaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Interfaces\\ITaskRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\ITaskRepository.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TaskRepository.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Repositories\\TaskRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\TaskRepository.cs",
@@ -79,12 +79,11 @@
               "ViewState": "AgIAACUAAAAAAAAAAAAIwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-29T17:13:53.238Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -98,13 +97,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Interfaces\\IUserRepository.cs",
               "ToolTip": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Interfaces\\IUserRepository.cs",
               "RelativeToolTip": "Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T15:43:25.596Z",
               "IsPinned": true,
@@ -112,13 +111,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-30T15:44:15.721Z",
               "IsPinned": true,
@@ -126,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TaskMapperProfile.cs",
               "DocumentMoniker": "C:\\Users\\oshri\\Desktop\\TaskManager\\TaskManagerAPI\\Mapper\\TaskMapperProfile.cs",
               "RelativeDocumentMoniker": "Mapper\\TaskMapperProfile.cs",
@@ -134,8 +133,7 @@
               "RelativeToolTip": "Mapper\\TaskMapperProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T06:45:58.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-31T06:45:58.078Z"
             }
           ]
         }

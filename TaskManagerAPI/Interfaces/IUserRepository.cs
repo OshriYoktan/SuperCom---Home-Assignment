@@ -5,5 +5,6 @@ namespace TaskManagerAPI.Interfaces
     public interface IUserRepository
     {
         Task<User> CreateUser(User task);
+        Task<User> GetUserById(int userId);
     }
 }

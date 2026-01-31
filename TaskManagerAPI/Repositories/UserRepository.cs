@@ -22,5 +22,10 @@ namespace TaskManagerAPI.Repositories
             await _context.SaveChangesAsync();
             return task;
         }
+
+        public async Task<User> GetUserById(int userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        }
     }
 }
