@@ -29,11 +29,9 @@ namespace taskmanager_reminders
 
             var factory = new ConnectionFactory() { HostName = RabbitMqHost };
 
-            // 1. Create Connection and Channel
             await using var connection = await factory.CreateConnectionAsync(stoppingToken);
             await using var channel = await connection.CreateChannelAsync(cancellationToken: stoppingToken);
 
-            // 2. Declare the Queue
             await channel.QueueDeclareAsync(
                 queue: QueueName,
                 durable: true,
@@ -43,21 +41,17 @@ namespace taskmanager_reminders
                 cancellationToken: stoppingToken
             );
 
-            // 3. Setup the Consumer (v7 syntax)
             var consumer = new AsyncEventingBasicConsumer(channel);
 
-            // In v7, you assign the Task-returning delegate to Received
             consumer.ReceivedAsync += async (model, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
                 _logger.LogInformation("🐇 RabbitMQ Message Received: {message}", message);
 
-                // Complete the task
                 await Task.CompletedTask;
             };
 
-            // Start consuming
             await channel.BasicConsumeAsync(
                 queue: QueueName,
                 autoAck: true,
@@ -65,7 +59,6 @@ namespace taskmanager_reminders
                 cancellationToken: stoppingToken
             );
 
-            // 4. Main loop: check overdue tasks
             while (!stoppingToken.IsCancellationRequested)
             {
                 try
@@ -75,7 +68,6 @@ namespace taskmanager_reminders
 
                     var now = DateTime.Now;
 
-                    // Fetch tasks where DueDate is today or earlier and reminder hasn't been sent
                     var overdueTasks = await db.Tasks
                         .Where(t => !t.IsReminderSent && t.DueDate <= now)
                         .ToListAsync(stoppingToken);
@@ -85,7 +77,6 @@ namespace taskmanager_reminders
                         var message = $"Hi your Task is due {task.Title}";
                         var body = Encoding.UTF8.GetBytes(message);
 
-                        // In v7, use BasicPublishAsync with Default Exchange ("")
                         await channel.BasicPublishAsync(
                             exchange: string.Empty,
                             routingKey: QueueName,
@@ -108,7 +99,6 @@ namespace taskmanager_reminders
                     _logger.LogError(ex, "❌ Error processing overdue tasks");
                 }
 
-                // Check every 10 seconds
                 await Task.Delay(10000, stoppingToken);
             }
         }
